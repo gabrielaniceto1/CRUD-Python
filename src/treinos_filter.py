@@ -24,7 +24,7 @@ def filtrar_distancia(lista):
 def filtragem(modo, reverso):
     #2.1. abre o csv
 
-    with open(r"Treinos.csv", "r", encoding="utf8") as file:
+    with open(r"csv\Treinos.csv", "r", encoding="utf8") as file:
         #2.2. transmorma tudo(csv) em uma lista separadas por "\n"
 
         linhas = file.read().split("\n")

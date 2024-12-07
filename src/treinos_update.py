@@ -4,7 +4,7 @@ os.system("cls")
 def treino_atualizar():
     lista=[]
     nome_atualizar=input("Digite o nome do treino/competição que voê deseja atualizar: ")
-    with open("Treinos.csv", "r", encoding="utf8") as file:
+    with open("csv\Treinos.csv", "r", encoding="utf8") as file:
         for i in file:
             separar=i.split(",")
             nome_antigo=separar[0]
@@ -24,7 +24,7 @@ def treino_atualizar():
                 lista.append(treino)
             else:
                 lista.append(i)
-    with open("Treinos.csv","w",encoding="utf8") as file:
+    with open("csv\Treinos.csv","w",encoding="utf8") as file:
         file.writelines(lista)
     import os
     sair=input("Treino atualizado com sucesso!\nAperte ENTER para sair  ")

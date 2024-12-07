@@ -16,7 +16,7 @@ def adicionar_treino():
     clima=str(input("Digite o clima do local: ")).upper()
 
     treino=(f"{nome},{data},{str(tempo)},{str(distancia)},{local},{clima}")
-    with open("Treinos.csv","a", encoding="utf8") as file:
+    with open("csv\Treinos.csv","a", encoding="utf8") as file:
         file.write(treino)
     print("Treino adicionado como sucesso!")
     import os
