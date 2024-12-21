@@ -1,6 +1,12 @@
 import os
 os.system("cls")
 
+def mostrar_metas():
+    with open("csv\Metas.csv","r") as file:
+        for i in file:
+            linha=i.split(",")
+            print(f"Meta: {linha[0]} | Tempo desejado: {linha[1]} | Distancia desejada: {linha[2]}")
+
 def mostrar_opções():
     print("Escolha uma das opções abaixo [1 a 6]: ")
     print("1 - Adicionar Treino ")
@@ -14,10 +20,9 @@ def mostrar_opções():
 def mostrar_opções_metas():
     print("Escolha uma das opções abaixo [1 a 4]: ")
     print("1 - Adicionar Meta ")
-    print("2 - Vizualizar Metas ")
-    print("3 - Atualizar Meta ")
-    print("4 - Deletar Meta ")
-    print("5 - SAIR ")
+    print("2 - Atualizar Meta ")
+    print("3 - Deletar Meta ")
+    print("4 - SAIR ")
 
 def main():
     import treinos_delete
@@ -25,7 +30,9 @@ def main():
     import treinos_insert
     import treinos_update
     import treinos_view
+    import treino_goals
     while True:
+        mostrar_metas()
         mostrar_opções()
         try:
             opcao=int(input())
@@ -47,7 +54,21 @@ def main():
             treinos_filter.menu_filtragem()
 
         elif opcao==6:
-            mostrar_opções_metas()
+            while True:
+                mostrar_opções_metas()
+                opcao2=input()
+                if opcao2=="1":
+                    treino_goals.adicionar_meta()
+                elif opcao2=="2":
+                    treino_goals.atualizar_meta()
+                elif opcao2=="3":
+                    treino_goals.deletar_meta()
+                elif opcao2=="4":
+                    print("Saindo...")
+                    break
+                else:
+                    print("Tente novamente um dos numeros acima!")
+
 
         elif opcao==7:
             print("Fechando Programa...")
