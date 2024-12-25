@@ -6,11 +6,14 @@ pode servir como material de estudos ou para aplicações, se adaptado para seu 
 
 ## Tecnologias utilizadas
 Python (linguagem e debbuger)
+
 Visual Studio Code
 
 ## Pré-requisitos para executar localmente
 Python 3.9 (ou superior)
+
 Git instalado
+
 Visual Studio Code (ou algum editor de codigo de sua preferência)
 
 ## Instalação
@@ -33,9 +36,13 @@ python src/main.py
 
 ##  Funcionalidades
 __Criar__: Cria e adiciona treinos, metas ou competições ao banco de dados.
+
 __Visualizar__: Exibe os treinos, metas ou competições armazenadas no banco de dados.
+
 __Atualizar__: Atualiza os treinos, metas ou competições ja existentes no banco de dados.
+
 __Deletar__: Deleta os treinos, metas ou competições ja existentes no banco de dados.
+
 __Filtrar__: Filtra os treinos ou competições em ordem crescente ou decrescente de tempo ou distância.
 
 ## Licença 
