@@ -3,6 +3,8 @@ import os
 os.system("cls")
 
 def adicionar_treino():
+    with open("csv\Treinos.csv","r", encoding="utf8") as file:
+        lista=file.readlines()
     nome=str(input("Digite o nome do treino/competição: ")).upper()
     data=str(input("Digite a data do treino/competição: "))
     while True:
@@ -17,7 +19,10 @@ def adicionar_treino():
 
     treino=(f"{nome},{data},{str(tempo)},{str(distancia)},{local},{clima}")
     with open("csv\Treinos.csv","a", encoding="utf8") as file:
-        file.write(treino)
+        if len(lista)<=0:
+            file.write(treino)
+        else:
+            file.write(f"\n{treino}")
     print("Treino adicionado como sucesso!")
     import os
     sair=input("Digite ENTER para sair ")

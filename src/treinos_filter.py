@@ -28,7 +28,7 @@ def filtragem(modo, reverso):
         #2.2. transmorma tudo(csv) em uma lista separadas por "\n"
 
         linhas = file.read().split("\n")
-        #2.3. quebra cada elemento da lista em listas menores separadas por ",""
+        #2.3. quebra cada elemento da lista em listas menores separadas por ","
 
         for i in range(len(linhas)):
             linhas[i] = linhas[i].split(",")
