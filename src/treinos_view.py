@@ -8,7 +8,7 @@ def vizualizar_treinos():
             print(f"nome: {separados[0]} | data: {separados[1]} | tempo: {separados[2]}min | distancia: {separados[3]}km | local: {separados[4]} | clima: {separados[5]} \n")
     import os
     sair=input("Digite ENTER para sair ")
-    os.syste,("cls")        
+    os.system("cls")        
 
 if  __name__=="__main__":
     vizualizar_treinos()

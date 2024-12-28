@@ -3,7 +3,7 @@ os.system("cls")
 
 def deletar_treino():
     lista=[]
-    deletar=input("Digite o nome do treino/competição que você quer apagar: ")
+    deletar=input("Digite o nome do treino/competição que você quer apagar: ").upper()
     with open("csv\Treinos.csv","r") as file:
         for i in file:
             separar=i.split(",")

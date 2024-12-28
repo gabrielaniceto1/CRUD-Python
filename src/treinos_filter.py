@@ -60,7 +60,7 @@ def menu_filtragem():
 
         filtragem(modo, True if reverso == 2 else False)
 
-        sair=input("Aperte Enter para Sair ou escreva 'continue' para filtrar novamente: ")
+        sair=input("Aperte Enter para Sair ou escreva 'continue' para filtrar novamente: ").lower()
         #3.2. limpa a tela e encerra o loop ou continua
 
         if sair=="continue":

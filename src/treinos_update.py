@@ -3,7 +3,7 @@ os.system("cls")
 
 def treino_atualizar():
     lista=[]
-    nome_atualizar=input("Digite o nome do treino/competição que voê deseja atualizar: ")
+    nome_atualizar=input("Digite o nome do treino/competição que voê deseja atualizar: ").upper()
     with open("csv\Treinos.csv", "r", encoding="utf8") as file:
         for i in file:
             separar=i.split(",")

@@ -23,7 +23,7 @@ def adicionar_treino():
             file.write(treino)
         else:
             file.write(f"\n{treino}")
-    print("Treino adicionado como sucesso!")
+    print("Treino adicionado com sucesso!")
     import os
     sair=input("Digite ENTER para sair ")
     os.system("cls")
